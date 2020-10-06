@@ -1,8 +1,10 @@
 package com.example.shoppinglist.other
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.R
 import com.example.shoppinglist.data.db.entities.ShoppingItem
@@ -29,6 +31,9 @@ class ShoppingItemAdapter(
     }
 
     override fun onBindViewHolder(holder: ShoppingViewHolder, position: Int) {
+
+        Log.d("new","New item")
+
         val curShoppingItem = items[position]
 
         holder.itemView.tvName.text = curShoppingItem.name
